@@ -1,5 +1,4 @@
 
-#
 default: &default
   adapter: postgresql
   encoding: unicode
@@ -16,9 +15,8 @@ development:
 test:
   <<: *default
   database: blog_app_test
-   username: postgres
+  username: postgres
   password: Bahadur@123
-
 
 production:
   <<: *default
