@@ -5,4 +5,9 @@ class PostControllerTest < ActionDispatch::IntegrationTest
     get post_index_url
     assert_response :success
   end
+  
+  test 'should get show' do
+    get post_show_url
+    assert_response :success
+  end
 end
