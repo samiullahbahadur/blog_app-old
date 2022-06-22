@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
-  get 'post/index'
-  root "user#index"
-
-  resources :user, only: [:index, :show] do
-  end
+  root 'user#index'
+resources :user, only: [:index, :show] do
+  resources :post, only: [:index, :show]
+end
 end
