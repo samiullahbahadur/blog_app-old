@@ -8,7 +8,7 @@ RSpec.describe 'Posts', type: :request do
         expect(response).to have_http_status(200)
         expect(response.body).to include('<h1>Posts</h1>')
         expect(response.body).to include('<p>Here is a list of posts for a given user</p>')
-        expect(response.body).to render_template('posts/index')
+        expect(response.body).to render_template('post/index')
       end
     end
   end
@@ -20,7 +20,7 @@ RSpec.describe 'Posts', type: :request do
         expect(response).to have_http_status(200)
         expect(response.body).to include('<h1>Posts</h1>')
         expect(response.body).to include('<p>Show one post for a given user</p>')
-        expect(response.body).to render_template('posts/show')
+        expect(response.body).to render_template('post/show')
       end
     end
   end
